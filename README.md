@@ -6,19 +6,25 @@ Upload up to 3 screenshots of your product and get a design review in a few minu
 
 Built with Next.js, the Vercel AI SDK and OpenRouter. Runs on Vercel.
 
+**Live demo:** [designmind-ai-azure.vercel.app](https://designmind-ai-azure.vercel.app/)
+
 ## How it works
 
 ```mermaid
 flowchart LR
   A[Upload screenshots] --> B[1. Image search]
-  B --> C[2. Visual]
-  B --> D[3. UX]
-  B --> E[4. Accessibility]
+  B --> K[(Design knowledge lookup)]
+  K --> C[2. Visual]
+  K --> D[3. UX]
+  K --> E[4. Accessibility]
   B --> F[5. Market]
   B --> G[6. Comparison]
-  C & D & E & F & G --> H[7. Lead reviewer]
+  E --> M[Pixel contrast check]
+  C & D & M & F & G --> H[7. Lead reviewer]
   H --> I[Marked-up design + report]
 ```
+
+After step 1, the app picks the most relevant notes from a built-in library (Nielsen's heuristics, WCAG 2.2 and design principles) and gives them to steps 2–4. Step 4 then measures contrast from the screenshot pixels in your browser.
 
 | Step | What it does |
 | --- | --- |
@@ -72,9 +78,24 @@ To see a finished review without a key, open **Quick Walk-through** in the app.
 - Target sizes are estimates. Small, thin text can measure slightly low, so near-misses are marked "Borderline".
 - A full review takes about 2–3 minutes. Check the OpenRouter Activity page for what it costs.
 
-## Credits
+## Acknowledgements
 
-The visual review's craft criteria paraphrase Anthropic's [frontend-design skill](https://github.com/anthropics/skills/tree/main/skills/frontend-design) (Apache-2.0).
+**Design guidance the reviewers use:**
+
+- [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/), Jakob Nielsen, Nielsen Norman Group
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/), W3C, including the contrast ratio formula and target sizes
+- Gestalt principles of visual perception (proximity, similarity, common region)
+
+**Services and libraries:**
+
+- [OpenRouter](https://openrouter.ai) for the AI models, and its web search powered by [Exa](https://exa.ai)
+- [Next.js](https://nextjs.org), [React](https://react.dev) and the [Vercel AI SDK](https://ai-sdk.dev)
+- [Zod](https://zod.dev), [jsPDF](https://github.com/parallax/jsPDF), [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable) and [idb-keyval](https://github.com/jakearchibald/idb-keyval)
+- [Tailwind CSS](https://tailwindcss.com) and [Playwright](https://playwright.dev)
+- Fonts: [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible) by the Braille Institute and [Manrope](https://fonts.google.com/specimen/Manrope) by Mikhail Sharanda, both under the SIL Open Font License
+- Hosted on [Vercel](https://vercel.com)
+
+**Tools:** vibe coded with the help of [Claude Code](https://claude.com/claude-code).
 
 ## License
 
