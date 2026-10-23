@@ -124,4 +124,4 @@ Below is a summary of what v0.1.0 includes (in scope) and what it leaves out (ou
 
 ## License
 
-[MIT](LICENSE). v0.1.0 © 2026 the DesignMind AI hackathon team: Raees Basheer, lourien, Savvy-Workspace, AidenKitayimbwa and investwelltech.
+[MIT](LICENSE). v0.1.0 © 2026 the DesignMind AI hackathon team: RaeesBasheer, lourien, Savvy-Workspace, AidenKitayimbwa and investwelltech.
