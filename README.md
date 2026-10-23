@@ -78,6 +78,31 @@ To see a finished review without a key, open **Quick Walk-through** in the app.
 - Target sizes are estimates. Small, thin text can measure slightly low, so near-misses are marked "Borderline".
 - A full review takes about 2–3 minutes. Check the OpenRouter Activity page for what it costs.
 
+## Scope (v0.1.0)
+
+Below is a summary of what v0.1.0 includes (in scope) and what it leaves out (out of scope).
+
+### In scope
+
+1. Three pages: Home (`/`), Review (`/review/<id>`) and an example review (`/examples/example-compare`) that works with no key and no API calls.
+2. Two key options, the Outskill key or bring your own key (BYOK), with **Test key** and **Clear key** buttons, a "Key in use" label and no silent switch to the Outskill key if a BYOK key fails.
+3. A model dropdown with 4 options (Gemini 3.8 Flash by default) and a custom model field, under an Advanced section.
+4. Upload of up to 3 screenshots (PNG, JPEG or WebP), resized in the browser, with optional product name, website and target audience.
+5. A seven-step review, described in [How it works](#how-it-works).
+6. Similar apps and market findings linked to their web sources.
+7. A live "N of 7 steps finished" counter, a status for each step and a retry if one fails.
+8. Reviews saved in the browser, so reloading mid-review continues where it left off.
+9. Results as numbered pins on the screenshots plus seven tabs, with an optional **Export PDF**, **Download JSON** and **Start a new review**. Nothing downloads automatically.
+10. A responsive, light-only layout for mobile, laptop and desktop, checked by automated screenshot tests.
+
+### Out of scope
+
+- Figma links, .fig files and PDF uploads.
+- More than 3 screenshots.
+- Any model or search provider other than OpenRouter.
+- User accounts, a database, or saving reviews on a server.
+- Per-visitor rate limits or an access code on the Outskill key.
+
 ## Acknowledgements
 
 **Design guidance the reviewers use:**
