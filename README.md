@@ -28,7 +28,7 @@ flowchart LR
   H --> I[Marked-up design + report]
 ```
 
-After step 1, the app picks the most relevant notes from a built-in library (Nielsen's heuristics, WCAG 2.2 and design principles) and gives them to steps 2–4. Step 4 then measures contrast from the screenshot pixels in your browser.
+After step 1, the app picks the most relevant notes from a built-in library (Nielsen's heuristics, WCAG 2.2 and design principles) and step 1's screen descriptions, and gives them to steps 2–4. Step 4 then measures contrast from the screenshot pixels in your browser.
 
 | Step | What it does |
 | --- | --- |
@@ -78,7 +78,7 @@ npm run test:responsive           # checks mobile, laptop and desktop layouts
 
 - Reviews are saved only in the browser that created them.
 - Target sizes are estimates. Small, thin text can measure slightly low, so near-misses are marked "Borderline".
-- A full review takes about 2–3 minutes. Check the OpenRouter Activity page for what it costs.
+- A full review usually finishes within 3 minutes. Check the OpenRouter Activity page for what it costs.
 
 ## Scope (v0.1.0)
 
@@ -88,7 +88,7 @@ Below is a summary of what v0.1.0 includes (in scope) and what it leaves out (ou
 
 1. Three pages: Home (`/`), Review (`/review/<id>`) and an example review (`/examples/example-compare`) that works with no key and no API calls.
 2. Two key options, the default key or bring your own key (BYOK), with **Test key** and **Clear key** buttons, a "Key in use" label and no silent switch to the default key if a BYOK key fails.
-3. A model dropdown with 4 options (Gemini 3.8 Flash by default) and a custom model field, under an Advanced section.
+3. A model dropdown with 4 options (Gemini 3.8 Flash by default), under an Advanced section.
 4. Upload of up to 3 images (PNG, JPEG or WebP), resized in the browser, with optional product name, website and target audience.
 5. A seven-step review, described in [How it works](#how-it-works).
 6. Similar apps and market findings linked to their web sources.
