@@ -2,6 +2,10 @@
 
 # DesignMind AI
 
+**Multimodal AI Design Analysis Suite**: autonomous visual evaluation, heuristic critique and live market benchmarking for product teams.
+
+*Built for the AI Engineering Accelerator C10 Hackathon 2026.*
+
 Upload up to 3 screenshots of your product and get a design review in a few minutes. Six AI reviewers check the visuals, usability, accessibility and market, then pin the most important fixes onto your screenshots.
 
 Built with Next.js, the Vercel AI SDK and OpenRouter. Runs on Vercel.
